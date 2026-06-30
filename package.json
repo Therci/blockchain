@@ -1,0 +1,14 @@
+{
+  "name": "projeto-dapp",
+  "version": "1.0.0",
+  "description": "DApp de exemplo com Truffle - contrato ContratoExemplo + interface web3.js",
+  "scripts": {
+    "compile": "truffle compile",
+    "migrate": "truffle migrate",
+    "migrate:reset": "truffle migrate --reset",
+    "client": "lite-server --baseDir=\"client\" --port=3000"
+  },
+  "devDependencies": {
+    "lite-server": "^2.6.1"
+  }
+}

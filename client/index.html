@@ -1,0 +1,78 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title> Contrato </title>
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link href="https://fonts.googleapis.com/css2?family=Comfortaa:wght@400;500;600;700&display=swap" rel="stylesheet" />
+  <link rel="stylesheet" href="style.css" />
+</head>
+<body>
+  <div class="scanlines"></div>
+
+  <div class="intro-wrap">
+    <div class="noise"></div>
+    <div class="noise noise-moving"></div>
+
+    <div class="play" data-splitting>
+      <span class="char" style="--char-index: 0">P</span>
+      <span class="char" style="--char-index: 1">L</span>
+      <span class="char" style="--char-index: 2">A</span>
+      <span class="char" style="--char-index: 3">Y</span>
+    </div>
+    <div class="time">--:--</div>
+    <div class="recordSpeed">SLP 0:00:00</div>
+  </div>
+
+  <main class="card">
+    <h1>Contrato</h1>
+    <p class="subtitle">Interface de integração com a blockchain via Web3.js</p>
+
+    <!-- Status da conexão com a rede / carteira -->
+    <div id="connectionStatus" class="status status--pending">
+      Conectando à blockchain...
+    </div>
+    <section class="block">
+      <h2>Valor atual armazenado</h2>
+      <div class="current-value" id="currentValue">--</div>
+      <button id="btnAtualizar" class="btn btn--secondary">Atualizar valor</button>
+    </section>
+
+    <hr />
+    <section class="block">
+      <h2>Guardar novo valor</h2>
+      <form id="formGuardar">
+        <label for="inputNumero">Número (uint128):</label>
+        <input
+          type="number"
+          id="inputNumero"
+          name="numero"
+          min="0"
+          step="1"
+          placeholder="Digite um número inteiro positivo"
+          required
+        />
+        <button type="submit" id="btnGuardar" class="btn btn--primary">
+          Guardar
+        </button>
+      </form>
+    </section>
+    <section class="block">
+      <h2>Status</h2>
+      <div id="log" class="log"></div>
+    </section>
+  </main>
+
+ 
+  <script src="https://cdn.jsdelivr.net/npm/web3@1.10.4/dist/web3.min.js"></script>
+  <script src="https://unpkg.com/splitting/dist/splitting.min.js"></script>
+
+ 
+  <script src="contractData.js"></script>
+
+
+  <script src="app.js"></script>
+</body>
+</html>
