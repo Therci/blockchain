@@ -1,5 +1,6 @@
 # Projeto DApp - Contrato Exemplo
-
+esse readme foi resumido ao longo do projeto.
+ta o passo a passo, bjs
 Estrutura completa: contrato Solidity, migration do Truffle e interface
 gráfica (HTML/CSS/JS) integrada via Web3.js.
 
